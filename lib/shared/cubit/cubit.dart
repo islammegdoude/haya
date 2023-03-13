@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:haya/modules/chat/chatScreen.dart';
 import 'package:haya/shared/cubit/states.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../modules/home/homeScreen.dart';
 import '../../modules/profile/profile.dart';
+import '../../modules/save/saveScreen.dart';
+import '../../modules/search/searchScreen.dart';
 class Appcubit extends Cubit<AppStates>{
   Appcubit() : super(AppInitailState());
   static Appcubit get(context) => BlocProvider.of(context);
   int currentIndex = 0;
-  List<Widget> screens = [
+  List<Widget> screens = const[
     HomeScreen(),
-    FavoriteScreen(),
+    SaveScreen(),
+    SearchScreen(),
     ChatScreen(),
     ProfileScreen(),
   ];
@@ -24,9 +28,15 @@ class Appcubit extends Cubit<AppStates>{
     ),
     BottomNavigationBarItem(
       icon: Icon(
-        Icons.favorite_border_outlined,
+        Icons.favorite_border_rounded,
       ),
-      label: 'favorite'
+      label: 'save'
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(
+        Icons.search,
+      ),
+      label: 'search'
     ),
     BottomNavigationBarItem(
       icon: Icon(

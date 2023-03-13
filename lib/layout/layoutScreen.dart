@@ -1,8 +1,8 @@
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-
-class LayoutSCreen extends StatelessWidget {
-  const LayoutSCreen({super.key});
+import 'package:flutter_bloc/flutter_bloc.dart';
+class LayoutScreen extends StatelessWidget {
+  const LayoutScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
