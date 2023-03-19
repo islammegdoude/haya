@@ -74,49 +74,56 @@ Widget defultFormField({
   IconData? suffixIcon,
   bool isPassWord = false,
 }) =>
-    TextFormField(
-      enabled: isClickable,
-      onTap: onTap,
-      validator: validator,
-      controller: controller,
-      keyboardType: keyboardType,
-      onFieldSubmitted: onFieldSubmitted,
-      onChanged: onChanged,
-      obscureText: isPassWord,
-      cursorColor: Colors.white,
-      style: const TextStyle(color: Colors.white),
-      decoration: InputDecoration(
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(
-            color: Colors.white,
-            width: 1.0,
-          ),
-        ),
-        enabledBorder: OutlineInputBorder(
+    Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: TextFormField(
+        
+        enabled: isClickable,
+        onTap: onTap,
+        validator: validator,
+        controller: controller,
+        keyboardType: keyboardType,
+        onFieldSubmitted: onFieldSubmitted,
+        onChanged: onChanged,
+        obscureText: isPassWord,
+        cursorColor: Colors.black,
+        style: const TextStyle(color: Colors.black),
+        decoration: InputDecoration(
+          focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(12),
             borderSide: const BorderSide(
-              color: Colors.white,
+              color: Colors.black,
               width: 1.0,
-            )),
-        prefixIcon: Icon(
-          prefixIcon,
-          color: Colors.white,
-        ),
-        suffixIcon: suffixIcon != null
-            ? IconButton(
-                onPressed: onPressedSuffix,
-                icon: Icon(
-                  suffixIcon,
-                  color: Colors.grey,
-                ))
-            : null,
-        labelStyle: TextStyle(
-          color: Colors.grey,
-        ),
-        labelText: textlabel,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
+            ),
+          ),
+          enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: const BorderSide(
+                color: Colors.black,
+                width: 1.0,
+              )),
+          prefixIcon: Icon(
+            prefixIcon,
+            color: Colors.grey,
+          ),
+          suffixIcon: suffixIcon != null
+              ? IconButton(
+                  onPressed: onPressedSuffix,
+                  icon: Icon(
+                    suffixIcon,
+                    color: Colors.grey,
+                  ))
+              : null,
+          labelStyle: const TextStyle(
+            color: Colors.grey,
+          ),
+          hintText: textlabel,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
         ),
       ),
     );

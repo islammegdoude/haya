@@ -20,6 +20,7 @@ class LoginScreen extends StatelessWidget {
         builder: (context, state) {
           return SafeArea(
             child: Scaffold(
+              backgroundColor: const Color(0xFF46C2CB),
               body: Padding(
                 padding: const EdgeInsets.only(
                   top: 20,
@@ -32,7 +33,7 @@ class LoginScreen extends StatelessWidget {
                     children: [
                       // image
                       const Image(
-                        image: AssetImage('assets/images/onboarding.png'),
+                        image: AssetImage('assets/images/login.png'),
                         height: 330,
                         width: 330,
                       ),
@@ -40,9 +41,9 @@ class LoginScreen extends StatelessWidget {
                       const Text(
                         'LOGIN',
                         style: TextStyle(
-                          color: Colors.white,
+                          color: Colors.black,
                           fontSize: 30.0,
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
                       const SizedBox(
@@ -59,7 +60,7 @@ class LoginScreen extends StatelessWidget {
                               keyboardType: TextInputType.emailAddress,
                               validator: (value) {
                                 if (value!.isEmpty) {
-                                  return 'email must not be empty';
+                                  return null;
                                 }
                               },
                               textlabel: 'Email',
@@ -74,7 +75,7 @@ class LoginScreen extends StatelessWidget {
                                 keyboardType: TextInputType.visiblePassword,
                                 validator: (value) {
                                   if (value!.isEmpty) {
-                                    return 'password must not be empty';
+                                    return null;
                                   }
                                   return null;
                                 },
@@ -92,7 +93,6 @@ class LoginScreen extends StatelessWidget {
                                         context, const LayoutScreen());
                                   }
                                 }),
-
                             // Forget PassWord
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
@@ -103,7 +103,7 @@ class LoginScreen extends StatelessWidget {
                                   },
                                   child: const Text('Forget PassWord',
                                       style: TextStyle(
-                                          color: Colors.blue, fontSize: 12.0)),
+                                          color: Color(0xFF064492), fontSize: 14.0)),
                                 ),
                               ],
                             ),
@@ -114,7 +114,7 @@ class LoginScreen extends StatelessWidget {
                               height: 53.5,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(12.0),
-                                color: Colors.blue,
+                                color: const Color(0xFFECFFFE),
                               ),
                               child: MaterialButton(
                                 onPressed: () {
@@ -126,7 +126,7 @@ class LoginScreen extends StatelessWidget {
                                 child: const Text(
                                   'LOGIN',
                                   style: TextStyle(
-                                    color: Colors.white,
+                                    color: Colors.black,
                                     fontSize: 24.0,
                                     fontWeight: FontWeight.w400,
                                   ),
@@ -140,8 +140,8 @@ class LoginScreen extends StatelessWidget {
                                 const Text(
                                   'You don\'t have acount ?',
                                   style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 12.0,
+                                    color: Colors.black,
+                                    fontSize: 14.0,
                                   ),
                                 ),
                                 TextButton(
@@ -150,7 +150,7 @@ class LoginScreen extends StatelessWidget {
                                   },
                                   child: const Text('Creat acount',
                                       style: TextStyle(
-                                          color: Colors.blue, fontSize: 12.0)),
+                                          color: Color(0xFF064492), fontSize: 14.0)),
                                 ),
                               ],
                             ),
