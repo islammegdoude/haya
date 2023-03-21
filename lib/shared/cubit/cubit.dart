@@ -12,7 +12,7 @@ class Appcubit extends Cubit<AppStates>{
   Appcubit() : super(AppInitailState());
   static Appcubit get(context) => BlocProvider.of(context);
   int currentIndex = 0;
-  List<Widget> screens = const[
+  List<Widget> screens = [
     HomeScreen(),
     SaveScreen(),
     SearchScreen(),
@@ -30,7 +30,7 @@ class Appcubit extends Cubit<AppStates>{
       icon: Icon(
         Icons.favorite_border_rounded,
       ),
-      label: 'save'
+      label: 'favorite'
     ),
     BottomNavigationBarItem(
       icon: Icon(
