@@ -4,6 +4,8 @@ import '../../components/components.dart';
 import '../../layout/layoutScreen.dart';
 import '../login/LoginCubit/LoginCubit.dart';
 import '../login/LoginCubit/LoginStates.dart';
+import '../login/loginScreen.dart';
+import 'informationScreen.dart';
 
 class RegisterScreen extends StatelessWidget {
   RegisterScreen({super.key});
@@ -154,7 +156,7 @@ class RegisterScreen extends StatelessWidget {
                                 onPressed: () {
                                   if (formKey.currentState!.validate()) {
                                     navigateAndFinish(
-                                        context, const LayoutScreen());
+                                        context, const InformationScreen());
                                   }
                                 },
                                 child: const Text(
@@ -180,7 +182,7 @@ class RegisterScreen extends StatelessWidget {
                                 ),
                                 TextButton(
                                   onPressed: () {
-                                    navigateTo(context, RegisterScreen());
+                                    navigateTo(context, LoginScreen());
                                   },
                                   child: const Text('Log In',
                                       style: TextStyle(
