@@ -24,8 +24,8 @@ class SearchScreen extends StatelessWidget {
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
               ),
-              child: Image.network(
-                'https://picsum.photos/seed/960/600',
+              child: Image.asset(
+                'assets/images/islam.jpg',
                 fit: BoxFit.cover,
               ),
             ),
@@ -64,6 +64,7 @@ class SearchScreen extends StatelessWidget {
                 },
               ),
             ),
+            
             Container(
               height: 36,
               margin: const EdgeInsetsDirectional.fromSTEB(16, 8, 16, 8),
@@ -83,6 +84,7 @@ class SearchScreen extends StatelessWidget {
             ),
             Expanded(
               child: ListView.separated(
+                physics: const BouncingScrollPhysics(),
                 scrollDirection: Axis.vertical,
                 itemCount: names.length,
                 separatorBuilder: ((context, index) => const SizedBox(

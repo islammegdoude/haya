@@ -22,8 +22,8 @@ class HomeScreen extends StatelessWidget {
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
               ),
-              child: Image.network(
-                'https://picsum.photos/seed/960/600',
+              child: Image.asset(
+                'assets/images/islam.jpg',
                 fit: BoxFit.cover,
               ),
             ),
@@ -115,15 +115,15 @@ class HomeScreen extends StatelessWidget {
                           decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                           ),
-                          child: Image.network(
-                            'https://picsum.photos/seed/960/600',
+                          child: Image.asset(
+                            'assets/images/islam.jpg',
                             fit: BoxFit.cover,
                           ),
                         ),
                         const Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
                           child: Text(
-                            'Maya Boca',
+                            'Islam Salah',
                             style: TextStyle(
                               fontFamily: 'Roboto',
                               color: Color(0xFF090F13),
@@ -170,8 +170,8 @@ class HomeScreen extends StatelessWidget {
               // image part
               ClipRRect(
                 borderRadius: BorderRadius.circular(0),
-                child: Image.network(
-                  'https://picsum.photos/seed/400/600',
+                child: Image.asset(
+                  'assets/images/islam.jpg',
                   width: MediaQuery.of(context).size.width,
                   height: 250,
                   fit: BoxFit.fitWidth,
